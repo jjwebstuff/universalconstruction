@@ -1,538 +1,546 @@
 <!DOCTYPE html>
 <html>
   	<head>
-    <meta charset="utf-8">
-    <title>Universal Construction</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>Universal Construction</title>
 
-    <!-- styles -->
+    <!-- Main styles -->
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="resources/css/animate.css">
 
     <!-- CDN for Bootstrap CSS-->
-    <link href="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
 
-    <!-- CDN for FontAwesome  -->
-    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- Video -->
+    <link rel="stylesheet" href="resources/css/video-js.css">
 
-<!--     <link href="resources/css/bootstrap.css" rel="stylesheet" />
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet" /> -->
-    <link href="resources/css/prettyPhoto.css" rel="stylesheet" />
-    <link href="resources/css/animate.css" rel="stylesheet" />
-    <link href="resources/css/style.css" rel="stylesheet" />
-    <link href="resources/color/default.css" rel="stylesheet" />
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-    <link rel="shortcut icon" href="ico/favicon.ico" />
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="resources/css/magnific-popup.css">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700+Roboto:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- U-Construction styles -->
+    <link rel="stylesheet" href="resources/css/u-construction.css">
+
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 </head>
-  	<body>
-		    <header>
-        <!-- start top -->
-        <div id="topnav" class="navbar navbar-fixed-top default">
-            <div class="navbar-inner">
-                <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                        <img src="resources/img/logo.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="navigation">
-                        <nav>
-                        <ul class="nav pull-right">
-                            <li class="current"><a href="#intro">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#works">Works</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                            <a href="#">Features <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="components.html" class="external">Components</a></li>
-                                <li><a href="icons.html" class="external">Icons</a></li>
-                                <li><a href="animations.html" class="external">56 Animations</a></li>
-                            </ul>
-                            </li>
-                        </ul>
-                        </nav>
-                    </div>
-                    <!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
-    <!-- end top -->
-    </header>
+  	<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-        <!-- section intro -->
-<section id="intro">
-    <div class="slogan">
-        <div class="icon">
-            <i class="icon-beaker icon-10x"></i>
+		
+
+		<!-- Navigation -->
+<nav class="navbar scroll-header my-sticky-element" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#about">Universal Construction</a>
         </div>
-        <h1>Welcome to <span>Vesperr</span> creative studio</h1>
-        <h2>Crafting ideas with technology and imagination</h2>
-    </div>
-</section>
-<!-- end intro -->
-<!-- Section about -->
-<section id="about" class="section">
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li class="active"><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#intro">hello</a></li> -->
+            <li class="active"><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#about">about</a></li>
+            <li><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#services">services</a></li>
+<!--             <li><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#work">work</a></li>
+            <li><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#prices">prices</a></li> -->
+            <li><a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#contact">contact</a></li>
+          </ul>
+        </div><!-- end .navbar-collapse -->
+    </div><!-- end .container -->
+</nav>
+
+        <!-- Comments out Work for Version 1
+<section class="work" id="work">
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <div class="heading">
-                    <h3><span>About us</span></h3>
-                </div>
-                <div class="sub-heading">
-                    <p>
-                         We have a history of doing what our name implies, creating a visual language around the beliefs of the brands we work with.
-                    </p>
-                </div>
+            <div class="col-xs-12">
+                <div class="section-headings">
+                    <h2>some of our latest work.</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, laudantium obcaecati dicta nesciunt provident fugit autem dolorem atque tenetur cumque.
+                    </h4>
+                </div><!--end section-headings - ->
             </div>
-        </div>
+        </div><!-- end .row - ->
         <div class="row">
-            <div class="span3">
-                <img src="resources/img/dummies/team1.jpg" alt="" class="img-polaroid" />
-                <div class="roles">
-                    <h5><strong>Baby Stewards Jr</strong></h5>
-                    <p>
-                        CEO - Founder
-                    </p>
-                    <ul class="social-profile">
-                        <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <img src="resources/img/dummies/team2.jpg" alt="" class="img-polaroid" />
-                <div class="roles">
-                    <h5><strong>Tommy Kreunichev</strong></h5>
-                    <p>
-                        Lead designer
-                    </p>
-                    <ul class="social-profile">
-                        <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <img src="resources/img/dummies/team3.jpg" alt="" class="img-polaroid" />
-                <div class="roles">
-                    <h5><strong>Moriella Maccini</strong></h5>
-                    <p>
-                        Customer support
-                    </p>
-                    <ul class="social-profile">
-                        <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <img src="resources/img/dummies/team4.jpg" alt="" class="img-polaroid" />
-                <div class="roles">
-                    <h5><strong>Brian James Scoothie</strong></h5>
-                    <p>
-                        Coffee maker
-                    </p>
-                    <ul class="social-profile">
-                        <li><a href="#"><i class="icon-facebook icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter icon-32 icon-circled"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin icon-32 icon-circled"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <ul class="work-list">
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+                <li class="col-xs-6 col-sm-4 home-project-item">
+                    <a href="portfolio.html">
+                        <figure>
+                            <img src="resources/img/homePortfolio/home-portfolio.png" alt="#" class="img-responsive">
+                            <figcaption>
+                                project name
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li><!-- end .home-project-item - ->
+
+            </ul><!-- end ul.work-list - ->
+        </div><!-- end .row - ->
+    </div><!-- end .container - ->
+</section><!-- end section.work -->
+
+<section class="about" id="about">
+    <div class="about-left">
+        <img src="resources/img/home-about.png" alt="#" class="img-responsive">
     </div>
-</section>
-<!-- end section about -->
-<!-- section services -->
-<section id="services" class="section parallax dark">
+    <div class="about-right">
+        <div class="aboutContent wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="container">
+                <h2>ABOUT US</h2>
+            <p>
+                With over 30 years of high end construction experience, Universal Construction Services has served the needs of the Chicagoland area (and beyond) for the past two years, growing through word of mouth and excellent reviews from our customers.
+            </p>            
+            <p>
+                Construction of all types is our passion.  We look forward to all projects big and small, finding solutions to all your remodeling and building needs.  Our greatest reward is your satisfaction.
+            </p>
+
+            </div>
+            
+        </div>
+        
+    </div><!-- end .about-right -->
+</section><!-- end section.about -->
+
+<!-- 
+<section class="employees">
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <div class="heading">
-                    <h3><span>Our services</span></h3>
-                </div>
-                <div class="sub-heading">
-                    <p>
-                         We have a history of doing what our name implies, creating a visual language around the beliefs of the brands we work with.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span3">
-                <div class="box aligncenter">
-                    <div class="halftop">
-                        <h4><strong>User interface</strong></h4>
-                        <i class="icon-desktop icon-4x"></i>
-                    </div>
-                    <p>
-                         Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
-                    </p>
-                    <a href="#" class="btn btn-theme">Learn more</a>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="box aligncenter">
-                    <div class="halftop">
-                        <h4><strong>Content management</strong></h4>
-                        <i class="icon-briefcase icon-4x"></i>
-                    </div>
-                    <p>
-                         Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
-                    </p>
-                    <a href="#" class="btn btn-theme">Learn more</a>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="box aligncenter">
-                    <div class="halftop">
-                        <h4><strong>Mobile application</strong></h4>
-                        <i class="icon-mobile-phone icon-4x"></i>
-                    </div>
-                    <p>
-                         Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
-                    </p>
-                    <a href="#" class="btn btn-theme">Learn more</a>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="box aligncenter">
-                    <div class="halftop">
-                        <h4><strong>Web design</strong></h4>
-                        <i class="icon-beaker icon-4x"></i>
-                    </div>
-                    <p>
-                         Lorem ipsum dolor sit amet, eum no latine delectus deserunt diam
-                    </p>
-                    <a href="#" class="btn btn-theme">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section services -->
-<!-- section works -->
-<section id="works" class="section gray-bg">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="heading">
-                    <h3><span>Recent works</span></h3>
-                </div>
-                <div class="sub-heading">
-                    <p>
-                         We have a history of doing what our name implies, creating a visual language around the beliefs of the brands we work with.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span12">
-                <ul class="filter">
-                    <li class="all active"><a href="#" class="btn btn-theme">All categories</a></li>
-                    <li class="web"><a href="#" class="btn btn-theme">Web design</a></li>
-                    <li class="brand"><a href="#" class="btn btn-theme">Brand identity</a></li>
-                    <li class="graphic"><a href="#" class="btn btn-theme">Graphic design</a></li>
-                </ul>
-                <div class="clear">
-                </div>
-                <div class="row">
-                    <ul class="portfolio-area da-thumbs">
-                        <li class="portfolio-item" data-id="id-0" data-type="web">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img1.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="web">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img2.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="brand">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img3.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="photo">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img4.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="graphic">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img5.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="graphic">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img6.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="photo">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img7.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                        <li class="portfolio-item" data-id="id-0" data-type="ilustrator">
-                        <div class="span3">
-                            <div class="thumbnail">
-                                <div class="image-wrapp">
-                                    <img src="resources/img/portfolio/img8.jpg" alt="Portfolio name" title="" />
-                                    <article class="da-animate da-slideFromRight" style="display: block;">
-                                    <h5><strong>Portfolio name</strong></h5>
-                                    <a href="#"><i class="icon-rounded icon-48 icon-link"></i></a>
-                                    <span><a class="zoom" data-pretty="prettyPhoto" href="resources/img/portfolio/big1.jpg">
-                                    <i class="icon-rounded icon-48 icon-zoom-in"></i>
-                                    </a></span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- section works -->
-<!-- section contact -->
-<section id="contact" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="heading">
-                    <h3><span>Get in touch</span></h3>
-                </div>
-                <div class="sub-heading">
-                    <p>
-                         Lorem ipsum dolor sit amet, mutat paulo simul per no, assum fastidii vituperata eam no.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="map-container">
-        <!-- google map code here -->
-        <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=peterongan+semarang&amp;sll=37.0625,-95.677068&amp;sspn=35.494074,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Peterongan,+Semarang,+Central+Java,+Indonesia&amp;ll=-6.991778,110.424719&amp;spn=0.005431,0.010568&amp;t=m&amp;z=14&amp;output=embed">
-        </iframe>
-        <!-- end google map code -->
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="span6">
-                <h4><i class="icon-envelope"></i><strong>Contact form</strong></h4>
-                <p>
-                    Want to work with us or just want to say hello? Don't hesitate to get in touch!
-                </p>
-                <!-- start contact form -->
-                <form id="contactform" action="#" method="post" class="contact-form" name="contact-form">
-                    <ul class="contact-list">
+            <ul>
+                <li class="col-xs-6 col-sm-3 profile">
+                    <img src="resources/img/homeProfile/employees.png" alt="#" class="img-circle img-responsive">
+                    <h4>john smith</h4>
+                    <h5>web designer</h5>
+                    <ul class="profile-contact">
                         <li>
-                        <label>Name <span>*</span></label>
-                        <input type="text" class="form_input" id="name" name="name" placeholder="Your name" />
-                        <li>
-                        <label>Email <span>*</span></label>
-                        <input type="text" class="form_input" name="email" id="email" placeholder="Your email" />
+                            <a href="mailto:hello@hammersmith.com" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="hello@hammersmith.com"><i class="fa fa-envelope-o"></i></a>
                         </li>
                         <li>
-                        <label>Your message <span>*</span></label>
-                        <textarea name="message" id="message" rows="12" class="form_textarea" placeholder="Your message"></textarea>
+                            <a href="tel:1234567890" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="(123) 456-7890"><i class="fa fa-phone"></i></a>
                         </li>
-                        <li class="last">
-                        <button class="btn btn-large btn-theme" type="submit" id="send">Send a message</button>
+                    </ul><!-- end ul.profile-contact - ->
+                </li><!-- end .profile - ->
+
+                <li class="col-xs-6 col-sm-3 profile">
+                    <img src="resources/img/homeProfile/employees.png" alt="#" class="img-circle img-responsive">
+                    <h4>john smith</h4>
+                    <h5>web designer</h5>
+                    <ul class="profile-contact">
+                        <li>
+                            <a href="mailto:hello@hammersmith.com" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="hello@hammersmith.com"><i class="fa fa-envelope-o"></i></a>
                         </li>
-                    </ul>
-                </form>
-                <!-- end contact form -->
-            </div>
-            <div class="span6">
-                <h4><i class="icon-suitcase"></i><strong>Our office</strong></h4>
-                <p>
-                     Feel free to ask if you have any question regarding our services or if you just want to say Hello, we would love to hear from you.
-                </p>
-                <div class="dotted_line">
-                </div>
-                <p>
-                    <strong>Vesperr Labs Inc</strong>
-                </p>
-                <p>
-                    X123 Street, palm 05 ave Peterongan Semarang, Indonesia 50242
-                </p>
-                <p>
-                    <span><i class="icon-phone"></i><strong>Phone:</strong> +6221 999 888 77 or +6221 999 888 66</span>
-                </p>
-                <p>
-                    <span><i class="icon-comment"></i><strong>Skype:</strong> vesperr.contact</span>
-                </p>
-                <p>
-                    <span><i class="icon-envelope-alt"></i><strong>Email:</strong> info@yourdomainname.com</span>
-                </p>
-                <div class="dotted_line">
-                </div>
-                <h4><i class="icon-group"></i><strong>Connect to our social profiles</strong></h4>
-                <div class="social-links">
-                    <ul class="social-links">
-                        <li><a href="#" title="Twitter"><i class="icon-square icon-32 icon-twitter"></i></a></li>
-                        <li><a href="#" title="Facebook"><i class="icon-square icon-32 icon-facebook"></i></a></li>
-                        <li><a href="#" title="Google plus"><i class="icon-square icon-32 icon-google-plus"></i></a></li>
-                        <li><a href="#" title="Linkedin"><i class="icon-square icon-32 icon-linkedin"></i></a></li>
-                        <li><a href="#" title="Pinterest"><i class="icon-square icon-32 icon-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section contact -->
-<!-- section bottom -->
-<section id="bottom" class="section">
+                        <li>
+                            <a href="tel:1234567890" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="(123) 456-7890"><i class="fa fa-phone"></i></a>
+                        </li>
+                    </ul><!-- end ul.profile-contact - ->
+                </li><!-- end .profile - ->
+
+                <li class="col-xs-6 col-sm-3 profile">
+                    <img src="resources/img/homeProfile/employees.png" alt="#" class="img-circle img-responsive">
+                    <h4>john smith</h4>
+                    <h5>web designer</h5>
+                    <ul class="profile-contact">
+                        <li>
+                            <a href="mailto:hello@hammersmith.com" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="hello@hammersmith.com"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li>
+                            <a href="tel:1234567890" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="(123) 456-7890"><i class="fa fa-phone"></i></a>
+                        </li>
+                    </ul><!-- end ul.profile-contact - ->
+                </li><!-- end .profile - ->
+
+                <li class="col-xs-6 col-sm-3 profile">
+                    <img src="resources/img/homeProfile/employees.png" alt="#" class="img-circle img-responsive">
+                    <h4>john smith</h4>
+                    <h5>web designer</h5>
+                    <ul class="profile-contact">
+                        <li>
+                            <a href="mailto:hello@hammersmith.com" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="hello@hammersmith.com"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li>
+                            <a href="tel:1234567890" class="info-tooltip" data-toggle="tooltip" data-placement="bottom" title="(123) 456-7890"><i class="fa fa-phone"></i></a>
+                        </li>
+                    </ul><!-- end ul.profile-contact - ->
+                </li><!-- end .profile - ->
+
+            </ul>
+        </div><!-- end .row - ->
+    </div><!-- end .container - ->
+</section><!-- end section.employees -->
+
+<section class="services" id="services">
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <div class="aligncenter">
-                    <div class="tweet">
-                    </div>
-                </div>
+            <div class="col-xs-12">
+                <div class="section-headings">
+                    <h2>Services We Provide</h2>
+                    <h4>
+                        For all projects big and small
+                    </h4>
+                </div><!-- end .section-headings -->
             </div>
-        </div>
-    </div>
-</section>
-<!-- end section bottom -->
+            <ul>
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-home fa-10x"></i>
+                        <h3>Remodel</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            From bathrooms to kitchens and everything in between, if you can think it we can do it
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-umbrella fa-10x"></i>
+                        <h3>Roofs New/Repair</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            Need a new roof or just a roof patch?  We can do it all ...and fast
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-paint-brush fa-10x"></i>
+                        <h3>Painting Interior / Exterior</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            From seamless patches to complete interior/exterior, we'll paint whatever you need
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-home fa-10x"></i>
+                        <h3>Remodel</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            From bathrooms to kitchens and everything in between, if you can think it we can do it
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-umbrella fa-10x"></i>
+                        <h3>Roofs New/Repair</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            Need a new roof or just a roof patch?  We can do it all ...and fast
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+
+                <li class="col-xs-12 col-md-4">
+                    <div class="service">
+                        <!-- <img src="resources/img/homeServices/home-services.png" alt="#" class="img-responsive"> -->
+                        <i class="fa fa-paint-brush fa-10x"></i>
+                        <h3>Painting Interior / Exterior</h3>
+                        <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            From seamless patches to complete interior/exterior, we'll paint whatever you need
+                        </p>
+                    </div><!-- end .service -->
+                </li><!-- end li -->
+            </ul><!-- end ul.service -->
+        </div><!-- end .row -->
+    </div><!-- end .container -->
+</section><!-- end section.services -->
+
+<!-- 
+<section class="prices" id="prices">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-headings">
+                    <h2>get your wallet out.</h2>
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, placeat veritatis itaque reiciendis eveniet cumque.
+                    </h4>
+                </div><!-- end .section-headings - ->
+            </div>
+        </div><!-- end .row - ->
+        <div class="row">
+
+            <div class="col-sm-4 price-option">
+                <div class="price-header">
+                    <h4>limited<span class="price pull-right wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"><sup>$</sup>7<small>/mo</small></span></h4>
+                </div><!-- end .price-header - ->
+                <div class="price-body">
+                    <ul>
+                        <li>100Gig bandwidth</li>
+                        <li>250Mb of storage</li>
+                        <li>email support</li>
+                        <li>free domain</li>
+                        <li>5 email accounts</li>
+                        <li>limited phone support</li>
+                    </ul>
+                </div><!-- end .price-body - ->
+                <div class="price-footer">
+                    <h6>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h6>
+                </div><!-- end price-footer - ->
+            </div><!-- end .price-option - ->
+
+            <div class="col-sm-4 price-option">
+                <div class="price-header">
+                    <h4><span class="popular">standard</span><span class="price pull-right wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"><sup>$</sup>15<small>/mo</small></span></h4>
+                </div><!-- end .price-header - ->
+                <div class="price-body">
+                    <ul>
+                        <li>500Gig bandwidth</li>
+                        <li>1Gig of storage</li>
+                        <li>email support</li>
+                        <li>5 free domain</li>
+                        <li>10 email accounts</li>
+                        <li>phone support</li>
+                    </ul>
+                </div><!-- end .price-body - ->
+                <div class="price-footer">
+                    <h6>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h6>
+                </div><!-- end price-footer - ->
+            </div><!-- end .price-option - ->
+
+            <div class="col-sm-4 price-option">
+                <div class="price-header">
+                    <h4>premium<span class="price pull-right wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"><sup>$</sup>25<small>/mo</small></span></h4>
+                </div><!-- end .price-header - ->
+                <div class="price-body">
+                    <ul>
+                        <li>unlimited bandwidth</li>
+                        <li>unlimited storage</li>
+                        <li>email support</li>
+                        <li>free domain</li>
+                        <li>10 email accounts</li>
+                        <li>unlimted phone support</li>
+                    </ul>
+                </div><!-- end .price-body - ->
+                <div class="price-footer">
+                    <h6>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h6>
+                </div><!-- end price-footer - ->
+            </div><!-- end .price-option - ->
+        </div><!-- end .row - ->
+        <div class="row">
+            <div class="sign-up">
+                <h4>Sign up for a 14-day free trial today!</h4>
+                <h5>no credit card required</h5>
+
+                <!-- Button trigger modal - ->
+                <button class="btn btn-round-inverse" data-toggle="modal" data-target="#registerModal">
+                  register
+                </button>
+
+                <!-- Modal - ->
+                <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h2 class="modal-title" id="registerModalLabel">register</h2>
+                            </div><!-- end .modal-header - ->
+
+                            <div class="modal-body">
+                            
+                                <ul class="social-register">
+                                    <li>
+                                        <button type="button" class="btn google-plus-bg-color">Connect with Google+</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn facebook-bg-color">Connect with Facebook</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn twitter-bg-color">Connect with Twitter</button>
+                                    </li>
+                                </ul><!-- end ul.social-register - ->
+                                <hr>
+                                <!-- Form - ->
+                                <form class="form-horizontal" id="form-register" role="form">
+                                    <!-- Email - ->
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">Email</label>
+                                        <div>
+                                          <input type="email" class="form-control" id="registerEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <!-- Password - ->
+                                    <div class="form-group">
+                                        <label for="registerInputPassword">Password</label>
+                                        <input type="password" class="form-control" id="registerInputPassword" placeholder="Password">
+                                     </div>
+                                    <!-- Submit button - ->
+                                    <div class="form-group">
+                                        <div>
+                                          <button type="button" class="btn btn-round-inverse">register</button>
+                                        </div>
+                                    </div>
+                                </form><!-- end form - ->
+                            </div><!-- end .modal-body - ->
+
+                        </div><!-- end .modal-content - ->
+                    </div><!-- end .modal-dialog - ->
+                </div><!-- end #model - ->
+
+            </div><!-- end .sign-up - ->
+        </div><!-- end .row - ->
+    </div><!-- end .container - ->
+</section><!-- end section.prices -->
+
+<!-- 
+<section class="map" id="contact">
+    <!-- Map - ->
+    <div id="map-canvas"></div>
+</section><!-- end section.map -->
+
+<section class="contact">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-headings">
+                    <h2>Contact Us</h2>
+                    <h4>We look forward to speaking with you</h4>
+                </div><!-- end .section-headings -->
+            </div>
+        
+            <div class="col-xs-12">
+                <form class="form" id="contact-form" role="form" method="post">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name" class="control-label">Name</label>
+                        <div>
+                          <input type="text" class="form-control requiredField" id="name" name="name" placeholder="Name">
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="control-label">Email</label>
+                        <div>
+                          <input type="email" class="form-control requiredField" id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <!-- Textbox -->
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" id="message" placeholder="Message" name="message" rows="5"></textarea>
+                    </div>
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <div>
+                          <button type="submit" id="submit" class="btn btn-round-inverse" >Send</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="error" data-alert class="alert alert-danger">Please fill in all data correctly.</p>
+                        <p id="thanks" data-alert class="alert alert-success">Thanks. We'll get back to you as soon as possible.</p>
+                        <p id="timedout" data-alert class="alert alert-danger">The connection to the server timed out.</p>
+                        <p id="state" data-alert class="alert alert-danger"></p>
+                    </div>
+                </form><!-- end form -->
+            </div>
+        </div><!-- end .row -->
+    </div><!-- end .container -->
+</section><!-- end section.contact -->
 		    
 		<footer>
-    <div class="verybottom">
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div class="aligncenter">
-                        <div class="logo">
-                            <a class="brand" href="index.html">
-                            <img src="resources/img/logo.png" alt="" />
-                            </a>
-                        </div>
-                        <p>
-                             &copy; Vesperr labs Inc 2013 - All right reserved
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-	
-		<a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+    <a href="https://www.google.com/maps/place/Lake+Zurich,+IL+60047/@42.2093994,-88.04286,12z/data=!3m1!4b1!4m2!3m1!1s0x880fa284845db5f3:0x44fefb85df26c730" target="_blank"><i class="fa fa-map-marker"></i>P.O. Box 381 Lake Zurich, IL 60047</a>
+    <a href="tel:8476684165"><i class="fa fa-phone"></i>847-668-4165</a>
+    <a href="mailto:global4joe@aol.com"><i class="fa fa-envelope"></i>global4joe@aol.com</a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+</footer><!-- end footer -->
     
-        	<!-- javascript -->
-	<script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
-	<!-- <script src="resources/js/jquery.min.js"></script> -->
-	<script src="resources/js/jquery.easing.js"></script>
-
-	<script src="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-	<!-- <script src="resources/js/bootstrap.js"></script> -->
-
-	<script src="resources/js/parallax/jquery.parallax-1.1.3.js"></script>
-	<script src="resources/js/nagging-menu.js"></script>
-	<script src="resources/js/jquery.nav.js"></script>
-	<script src="resources/js/prettyPhoto/jquery.prettyPhoto.js"></script>
-	<script src="resources/js/portfolio/jquery.quicksand.js"></script>
-	<script src="resources/js/portfolio/setting.js"></script>
-	<script src="resources/js/hover/jquery-hover-effect.js"></script>
-	<script src="resources/js/jquery.scrollTo.js"></script>
-	<script src="resources/js/twitter/jquery.tweet.js"></script>
-	<script src="resources/js/twitter/function.js"></script>
-	<script src="resources/js/animate.js"></script>
-	<script src="resources/js/custom.js"></script>
+        <!-- Javascript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- <script src="resources/js/jquery-1.10.2-min.js"></script> -->
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/smooth-scroll.js"></script>
+<script src="resources/js/waypoints.min.js"></script>
+<script src="resources/js/waypoints-sticky.min.js"></script>
+<script src="resources/js/wow.min.js"></script>
+<script src="resources/js/placeholders.min.js"></script>
+<script src="resources/js/jquery.magnific-popup.min.js"></script>
+<script src="resources/js/custom.js"></script>
     </body>
 </html>

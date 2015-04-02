@@ -1,112 +1,273 @@
-/*global $:false, jQuery:false, console:false */
-jQuery(document).ready(function($) {
-"use strict";
+$(document).ready(function() {
 
-		//add some elements with animate effect
-		$('.icon').addClass("animated fadeInDown");
-		$("#intro").hover(
-			function () {
-			$('.icon').addClass("animated fadeInDown");
-			},
-			function () {
-			$('.icon').removeClass("animated fadeInDown");
-			}
-		);
-		
-	//scroll to top
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.scrollup').fadeIn();
-			} else {
-			$('.scrollup').fadeOut();
-		}
-	});
-	$('.scrollup').click(function(){
-		$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-	});
+  // WOW.JS ANIMATION AND TRIGGER
+  // -----------------------------------------
+  var wow = new WOW(
+    {
+      boxClass:     'wow',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       false
+    }
+  );
+  new WOW().init();
 
-    $('.accordion').on('show', function (e) {
-	
-		$(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-		$(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-		$(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
+
+  // VIDEO POPUP
+  // -----------------------------------------
+  $('.popup-video').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false,
+
+    iframe: {
+      markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="mfp-close"></div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+              '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+      patterns: {
+        youtube: {
+          index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+          id: 'v=', // String that splits URL in a two parts, second part should be %id%
+          // Or null - full URL will be returned
+          // Or a function that should return %id%, for example:
+          // id: function(url) { return 'parsed id'; } 
+
+          src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe. 
+        },
+        vimeo: {
+          index: 'vimeo.com/',
+          id: '/',
+          src: '//player.vimeo.com/video/%id%?autoplay=1'
+        },
+        gmaps: {
+          index: '//maps.google.',
+          src: '%id%&output=embed'
+        }
+      },
+
+      srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+    }
+  });
+
+
+  // GOOGLE MAPS
+  // -----------------------------------------
+  // Enable the viual refresh
+  google.maps.visualRefresh = true;
+  var myLatlng = new google.maps.LatLng(37.788149,-122.4071);
+  var map;
+  var grayStyles = [
+      {
+      featureType: "all",
+      stylers: [
+        // Change map sytles here
+        { saturation: -30 },
+        { lightness: 30 }
+      ]
+      },
+   ];
+  function initialize() {
+    var mapOptions = {
+      zoom: 13,
+      center: new google.maps.LatLng(37.788149,-122.4071),
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+    zoomControl: true,
+    scrollwheel: false,
+    panControl: false,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL
+      },
+      styles: grayStyles,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title:"Name of Location"
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+  // Misc
+  // ----------------------------------------- 
+  // Responsive Navigation collapse auto hide once list item is selected
+  if ($(window).width()<=767) {
+
+    $("body").on("click", ".navbar-collapse a", function() {
+      var $this = $(this);
+
+      setTimeout(function() {
+        $this.closest(".navbar-collapse").collapse('hide');
+      }, 250);
+    });
+  }
+
+  // Tooltip
+  $('.info-tooltip').tooltip();
+
+  
+  // Contact Form Validations
+  // ----------------------------------------- 
+  // Validation Form with AJAX while typing for inputs
+  $('input').bind('input propertychange', function() {
+    $(this).parent().find('.error').remove();
+    $(this).parent().find('.valid').remove();
+      if( $(this).attr('id') === 'email' ){
+        var checkEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if ($(this).val() === "" || $(this).val() === " ") {
+          $(this).after("<span class='error'></span>");
+          $(this).parent().find('.error').fadeIn('slow');
+        } else if (!checkEmail.test($(this).val())) {
+          $(this).after("<span class='error'></span>");
+          $(this).parent().find('.error').fadeIn('slow');
+        } else {
+          $(this).after("<span class='valid'></span>");
+          $(this).parent().find('.valid').fadeIn('slow');
+        }
+        } else {
+        if($(this).val() === "" || $(this).val() === " "){
+          $(this).after("<span class='error'></span>");
+          $(this).parent().find('.error').fadeIn('slow');
+        } else {
+          $(this).after("<span class='valid'></span>");
+          $(this).parent().find('.valid').fadeIn('slow');
+        }
+      }
+  });
+
+
+  // Validation Form with AJAX on Submit 
+  $('#submit').click(function(){
+    $('span.error').fadeOut('slow');
+    $('span.valid').fadeOut('slow');
+    $('#thanks').hide();
+    $('#error').hide();
+    $('#timedout').hide();
+    $('#state').hide();
+    
+    var error = false;
+    
+    var name = $('#name').val();
+    if(name === "" || name === " ") {
+      $('#name').after("<span class='error'></span>");
+      $('#name').parent().find('.error').fadeIn('slow');
+      error = true;
+    } else {
+      $('#name').after("<span class='valid'></span>");
+      $('#name').parent().find('.valid').fadeIn('slow');
+    }
+    
+    var checkEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var email = $('#email').val();
+    if (email === "" || email === " ") {
+      $('#email').after("<span class='error'></span>");
+      $('#email').parent().find('.error').fadeIn('slow');
+      error = true;
+    } else if (!checkEmail.test(email)) {
+      $('#email').after("<span class='error'></span>");
+      $('#email').parent().find('.error').fadeIn('slow');
+      error = true;
+    } else {
+      $('#email').after("<span class='valid'></span>");
+      $('#email').parent().find('.valid').fadeIn('slow');
+    }
+    
+    var message = $('#message').val();
+    if(message === "" || message === " ") {
+      $('#message').after("<span class='error'></span>");
+      $('#message').parent().find('.error').fadeIn('slow');
+      error = true;
+    } else {
+      $('#message').after("<span class='valid'></span>");
+      $('#message').parent().find('.valid').fadeIn('slow');
+    }
+    
+    if(error === true) {
+      $('#error').fadeIn('slow');
+      setTimeout(function() {
+          $('#error').fadeOut('slow');
+      }, 3000);
+      return false;
+    }
+    
+    var data_string = $('#contact-form').serialize();
+    
+    $.ajax({
+      type: "POST",
+      url: "sendMail.php",
+      data: {name:name,email:email,message:message},
+      timeout: 6000,
+      error: function(request,error) {
+        if (error === "timeout") {
+          $('#timedout').fadeIn('slow');
+          setTimeout(function() {
+              $('#timedout').fadeOut('slow');
+          }, 3000);
+        }
+        else {
+          $('#state').fadeIn('slow');
+          $("#state").html('The following error occured: ' + error + '');
+          setTimeout(function() {
+              $('#state').fadeOut('slow');
+          }, 3000);
+        }
+      },
+      success: function() {
+        $('span.valid').remove();
+        $('#thanks').fadeIn('slow');
+        $('input').val('');
+        $('textarea').val('');
+        setTimeout(function() {
+            $('#thanks').fadeOut('slow');
+        }, 3000);
+      }
     });
     
-    $('.accordion').on('hide', function (e) {
-        $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-		$(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-		$(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
-    });	
-	
-      // Create the dropdown base
-      $("<select />").appendTo("nav");
-      
-      // Create default option "Go to..."
-      $("<option />", {
-         "selected": "selected",
-         "value"   : "",
-         "text"    : "Go to..."
-      }).appendTo("nav select");
-      
-      // Populate dropdown with menu items
-      $("nav a").each(function() {
-       var el = $(this);
-       $("<option />", {
-           "value"   : el.attr("href"),
-           "text"    : el.text()
-       }).appendTo("nav select");
-	});
+    return false;
+  });
+}); // End $(document).ready(function()
 
-	//prettyphoto
-	$("a[data-pretty^='prettyPhoto']").prettyPhoto();
 
-	//portfolio hover
-	$('ul.da-thumbs > li').hoverdir();
-	
-	// To make dropdown actually work
-	// To make more unobtrusive
-      $("nav select").change(function() {
-        window.location = $(this).find("option:selected").val();
+
+$(window).load(function(){
+
+  // Sticky navigation
+  $('.my-sticky-element').waypoint('sticky', {
+    stuckClass: 'stuck',
+    offset: 0,
+  });
+
+  $(window).resize(function() {
+
+    // Responsive Navigation collapse auto hide after window has been resized.
+    if ($(window).width()<=767) {
+
+      $("body").on("click", ".navbar-collapse a", function() {
+        var $this = $(this);
+
+        setTimeout(function() {
+          $this.closest(".navbar-collapse").collapse('hide');
+        }, 250);
       });
+    }
 
-		$('ul.nav li.dropdown').hover(function () {
-			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
-		}, function () {
-			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
-		});	
-	//.parallax(xPosition, speedFactor, outerHeight) options:
-	//xPosition - Horizontal position of the element
-	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	
-	// parallax background
-		$('#intro').parallax("50%", 0.1);
-		$('#services').parallax("50%", 0.2);
-		$('#bottom').parallax("50%", 0.1);
-     
-	//navigation
-	$('.navigation').onePageNav({
-		begin: function() {
-			console.log('start');
-		},
-		end: function() {
-			console.log('stop');
-		},
-			scrollOffset: 0		
-	});
-	
+    // Scrollspy
+    $('body').scrollspy({ target: '.navbar' });
 
-
-});
-
-
-$(window).scroll(function(){
-"use strict";
-	if($(window).scrollTop()<10){
-		
-		$('.fade').stop(true,true).fadeTo("slow",1);
-	} else {
-	$('.fade').stop(true,true).fadeTo("slow", 0.33);
-	}
+    $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh');
+    });
+  });
 });

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   	{% include head.html %}
-  	<body>
+  	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		
+
 		{% include navigation.html %}
 
         {{ content }}
 		    
 		{% include footer.html %}
-	
-		<a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
     
         {% include javascript_includes.html %}
     </body>
