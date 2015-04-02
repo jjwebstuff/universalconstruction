@@ -11,7 +11,7 @@
 
 
 	// Edit below to your needs
-	$emailTo = 'your@email-address.com';
+	$emailTo = 'jacobsiddall@gmail.com';
 	$subject = 'Message from '.$name;
 	$sendCopy = trim($_POST['sendCopy']);
 	$body = "Name: $name \n\nEmail: $email \n\nMessage: $message";
