@@ -1,3 +1,10 @@
+.navbar-header .navbar-brand {
+	padding: 4px 0 6px 0;
+}
+.logo{
+	height: 100%;
+	width: auto;
+}
 @media screen and (max-width: 767px) {
 	.fa-10x{
 		font-size: 10em;
@@ -17,4 +24,7 @@
 	.fa-10x{
 		font-size: 10em;
 	}
+}
+#contact-form{
+	display: none;
 }

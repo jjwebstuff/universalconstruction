@@ -444,7 +444,7 @@ title: Universal Construction
                     <!-- Submit button -->
                     <div class="form-group">
                         <div>
-                          <button type="submit" id="submit" class="btn btn-round-inverse" >Send</button>
+                          <input type="submit" id="submit" class="btn btn-round-inverse" value='Send' />
                         </div>
                     </div>
                     <div>
@@ -454,6 +454,36 @@ title: Universal Construction
                         <p id="state" data-alert class="alert alert-danger"></p>
                     </div>
                 </form><!-- end form -->
+                <!-- This uses simpleform until I get ths loaded on a better server -->
+                <form class="form" action="https://getsimpleform.com/messages?form_api_token=68467c8a519d42bf356eb50e5ebdfab2" method="post">
+                <!-- <form class="form" id="contact-form" role="form" method="post"> -->
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name" class="control-label">Name</label>
+                        <div>
+                          <input type="text" class="form-control requiredField" id="name" name="name" placeholder="Name">
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="control-label">Email</label>
+                        <div>
+                          <input type="email" class="form-control requiredField" id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <!-- Textbox -->
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" id="message" placeholder="Message" name="message" rows="5"></textarea>
+                    </div>
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <div>
+                          <input type="submit" id="submit" class="btn btn-round-inverse" value='Send' />
+                        </div>
+                    </div>
+                </form><!-- end form -->
+
             </div>
         </div><!-- end .row -->
     </div><!-- end .container -->

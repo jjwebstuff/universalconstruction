@@ -88,7 +88,7 @@ $(document).ready(function() {
       styles: grayStyles,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    // map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     var marker = new google.maps.Marker({
         position: myLatlng,
