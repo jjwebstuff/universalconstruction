@@ -34,3 +34,6 @@ img.img-responsive.img-services{
 	width: auto;
 	/*max-width: 222px;*/
 }
+.service .fa.fa-home{
+	color: black;
+}
