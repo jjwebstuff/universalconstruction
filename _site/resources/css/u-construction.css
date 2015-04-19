@@ -28,3 +28,9 @@
 #contact-form{
 	display: none;
 }
+img.img-responsive.img-services{
+	/*height: inherit;*/
+	height: 165px;
+	width: auto;
+	/*max-width: 222px;*/
+}
